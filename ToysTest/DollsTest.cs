@@ -17,11 +17,11 @@ namespace ToysTest
             var doll = GetDolls();
             var copyDoll =  doll.CloneToys();
             Assert.IsNotNull(copyDoll);
-            Assert.AreEqual(copyDoll._summ, doll._summ);
+            Assert.AreEqual(copyDoll._cost, doll._cost);
             Assert.AreEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
 
 
-            copyDoll._summ = 300;
+            copyDoll._cost = 300;
             copyDoll._manufacturer._nameCompany = "Brasser";
 
             Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
@@ -34,11 +34,11 @@ namespace ToysTest
             var doll = GetDolls();
             var copyDoll = (Dolls)doll.Clone();
             Assert.IsNotNull(copyDoll);
-            Assert.AreEqual(copyDoll._summ, doll._summ);
+            Assert.AreEqual(copyDoll._cost, doll._cost);
             Assert.AreEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
 
 
-            copyDoll._summ = 300;
+            copyDoll._cost = 300;
             copyDoll._manufacturer._nameCompany = "Brasser";
 
             Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);

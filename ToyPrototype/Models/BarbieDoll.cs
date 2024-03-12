@@ -9,7 +9,7 @@ namespace ToyPrototype.Models
         
         public BarbieDoll() { }
 
-        public BarbieDoll(ProductArticle productArticle, int summ, string name, Manufacturer manufacturer, int weightPaking, string colorBarbie) : base(productArticle, summ, name, manufacturer)
+        public BarbieDoll(ProductArticle productArticle, int cost, string name, Manufacturer manufacturer, int weightPaking, string colorBarbie) : base(productArticle, cost, name, manufacturer)
         {
             _weightPaking = weightPaking;
             _colorBarbie = colorBarbie; 
@@ -22,7 +22,7 @@ namespace ToyPrototype.Models
 
         public override BarbieDoll CloneToys()
         {
-            return new BarbieDoll(_productArticle, _summ, _name, _manufacturer,_weightPaking,_colorBarbie).DeepCopyXml();
+            return new BarbieDoll(_productArticle, _cost, _name, _manufacturer,_weightPaking,_colorBarbie).DeepCopyXml();
         }
 
 

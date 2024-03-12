@@ -12,9 +12,9 @@ namespace ToysTest
             Assert.IsNotNull(cloneToys);
             Assert.AreNotSame(toys, cloneToys);
             Assert.AreEqual(toys._productArticle.Id, cloneToys._productArticle.Id);
-            cloneToys._summ = 20;
+            cloneToys._cost = 20;
             cloneToys._productArticle = new ProductArticle(23, "dOLLSwer");
-            Assert.AreNotEqual(toys._summ, cloneToys._summ);
+            Assert.AreNotEqual(toys._cost, cloneToys._cost);
             Assert.AreNotSame(toys._productArticle.Id, cloneToys._productArticle.Id);
         }
 
@@ -26,9 +26,9 @@ namespace ToysTest
             Assert.IsNotNull(cloneToys);
             Assert.AreNotSame(toys, cloneToys);
             Assert.AreEqual(toys._productArticle.Id, cloneToys._productArticle.Id);
-            cloneToys._summ = 20;
+            cloneToys._cost = 20;
             cloneToys._productArticle = new ProductArticle(2, "DF");
-            Assert.AreNotEqual(toys._summ, cloneToys._summ);
+            Assert.AreNotEqual(toys._cost, cloneToys._cost);
             Assert.AreNotSame(toys._productArticle.Id, cloneToys._productArticle.Id);
         }
 

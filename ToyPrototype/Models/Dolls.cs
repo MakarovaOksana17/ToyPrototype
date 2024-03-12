@@ -10,7 +10,7 @@ namespace ToyPrototype.Models
 
         public Dolls() { }
 
-        public Dolls(ProductArticle productArticle, int summ, string name, Manufacturer manufacturer) : base(productArticle, summ)
+        public Dolls(ProductArticle productArticle, int cost, string name, Manufacturer manufacturer) : base(productArticle, cost)
         {
             _name = name;
             _manufacturer = manufacturer;
@@ -18,7 +18,7 @@ namespace ToyPrototype.Models
 
         public override Dolls CloneToys()
         {
-            return new Dolls(_productArticle,_summ,_name,_manufacturer).DeepCopyXml();
+            return new Dolls(_productArticle, _cost, _name,_manufacturer).DeepCopyXml();
         }
 
         public override object Clone()

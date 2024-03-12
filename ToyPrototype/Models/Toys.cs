@@ -6,14 +6,14 @@ namespace ToyPrototype.Models
 {
     public class Toys: ICloneable,ICloneToys<Toys>
     {
-        public int _summ;
+        public int _cost;
         public ProductArticle  _productArticle;
 
         public Toys() { }
-        public Toys(ProductArticle productArticle, int summ) {
+        public Toys(ProductArticle productArticle, int cost) {
         
             _productArticle = productArticle;
-            _summ = summ;
+            _cost = cost;
         }
 
         public virtual object Clone()
@@ -23,13 +23,13 @@ namespace ToyPrototype.Models
 
         public virtual Toys CloneToys()
         {
-            Toys toys = new Toys(_productArticle, _summ);
+            Toys toys = new Toys(_productArticle, _cost);
              return toys.DeepCopyXml();
         }
 
         public override string ToString()
         {
-            return $"{nameof(_summ)}:{_summ},{nameof(_productArticle)}:{_productArticle}";
+            return $"{nameof(_cost)}:{_cost},{nameof(_productArticle)}:{_productArticle}";
         }
     }
 }
