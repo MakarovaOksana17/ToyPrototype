@@ -2,10 +2,10 @@
 
 namespace ToyPrototype.Models
 {
-    public class BarbieDoll : Dolls, ICloneable
+    public class BarbieDoll : Dolls
     {
         public int _weightPaking;
-        public string _colorBarbie;
+        public string? _colorBarbie;
         
         public BarbieDoll() { }
 
@@ -22,9 +22,8 @@ namespace ToyPrototype.Models
 
         public override BarbieDoll CloneToys()
         {
-            return new BarbieDoll(_productArticle, _cost, _name, _manufacturer,_weightPaking,_colorBarbie).DeepCopyXml();
+            return this.DeepCopyXml();
         }
-
 
         public override string ToString()
         {

@@ -2,8 +2,8 @@
 {
     public class Manufacturer
     {
-        public string _address;
-        public string _nameCompany;
+        public string? _address;
+        public string? _nameCompany;
 
         public Manufacturer() { }
 

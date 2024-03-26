@@ -7,7 +7,7 @@ namespace ToyPrototype.Models
     public class Toys: ICloneable,ICloneToys<Toys>
     {
         public int _cost;
-        public ProductArticle  _productArticle;
+        public ProductArticle? _productArticle;
 
         public Toys() { }
         public Toys(ProductArticle productArticle, int cost) {
@@ -22,9 +22,8 @@ namespace ToyPrototype.Models
         }
 
         public virtual Toys CloneToys()
-        {
-            Toys toys = new Toys(_productArticle, _cost);
-             return toys.DeepCopyXml();
+        {            
+            return this.DeepCopyXml();
         }
 
         public override string ToString()

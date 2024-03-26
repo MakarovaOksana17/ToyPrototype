@@ -3,10 +3,10 @@ using ToyPrototype.Interface;
 
 namespace ToyPrototype.Models
 {
-    public class Dolls: Toys, ICloneable
+    public class Dolls: Toys
     {
-        public string _name;
-        public Manufacturer _manufacturer;
+        public string? _name;
+        public Manufacturer? _manufacturer;
 
         public Dolls() { }
 
@@ -18,7 +18,7 @@ namespace ToyPrototype.Models
 
         public override Dolls CloneToys()
         {
-            return new Dolls(_productArticle, _cost, _name,_manufacturer).DeepCopyXml();
+            return this.DeepCopyXml();
         }
 
         public override object Clone()

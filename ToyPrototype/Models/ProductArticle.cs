@@ -7,7 +7,7 @@ namespace ToyPrototype.Models
 
         public int Id { get; set; }
 
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         public ProductArticle() { }
         public ProductArticle(int id, string title)

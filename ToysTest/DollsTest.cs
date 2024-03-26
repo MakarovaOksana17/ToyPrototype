@@ -18,14 +18,14 @@ namespace ToysTest
             var copyDoll =  doll.CloneToys();
             Assert.IsNotNull(copyDoll);
             Assert.AreEqual(copyDoll._cost, doll._cost);
-            Assert.AreEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
+            Assert.AreEqual(copyDoll._manufacturer?._nameCompany, doll._manufacturer?._nameCompany);
 
 
             copyDoll._cost = 300;
-            copyDoll._manufacturer._nameCompany = "Brasser";
+            copyDoll._manufacturer!._nameCompany = "Brasser";
 
-            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
-            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
+            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer?._nameCompany);
+            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer?._nameCompany);
         }
 
         [TestMethod]
@@ -35,14 +35,14 @@ namespace ToysTest
             var copyDoll = (Dolls)doll.Clone();
             Assert.IsNotNull(copyDoll);
             Assert.AreEqual(copyDoll._cost, doll._cost);
-            Assert.AreEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
+            Assert.AreEqual(copyDoll._manufacturer?._nameCompany, doll._manufacturer?._nameCompany);
 
 
             copyDoll._cost = 300;
-            copyDoll._manufacturer._nameCompany = "Brasser";
+            copyDoll._manufacturer!._nameCompany = "Brasser";
 
-            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
-            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer._nameCompany);
+            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer?._nameCompany);
+            Assert.AreNotEqual(copyDoll._manufacturer._nameCompany, doll._manufacturer?._nameCompany);
 
         }
     }
